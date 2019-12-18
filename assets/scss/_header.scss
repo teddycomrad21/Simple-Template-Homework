@@ -1,4 +1,43 @@
-header {
-    padding: 0 50vw;
-    margin: 0 -50vw;
+.header {
+    // padding: 0 50vw;
+    // margin: 0 -50vw;
+
+    display: flex;
+    flex: 0 0 100%;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.menu {
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    flex: 1 0 200px;
+
+    &-list {
+        display: flex;
+        
+        text-decoration: none;
+        list-style-type: none;
+        color: $light-color;
+
+        &__item {
+            font-size: 12px;      
+
+            a {
+                border-radius: 15px;
+                padding: 12px 15px;
+                transition: all 0.5s;
+                
+
+                &:hover {
+                    background-color: $base-color;
+                }
+            }
+        }
+    }
+
+    .-style-active > a {
+        background-color: $accent-color;
+    }
 }
