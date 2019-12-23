@@ -1,0 +1,28 @@
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    
+    display: flex;
+    
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    padding: 15px;
+}
+
+.main {
+    background-color: $light-color;
+
+    order: 3;
+    position: relative;
+    padding: 0 20px 15px 15px;
+
+    flex: 1 0 calc(100% - 300px);
+
+    p {
+        text-align: justify;
+    }
+}
+
+
+
+
+

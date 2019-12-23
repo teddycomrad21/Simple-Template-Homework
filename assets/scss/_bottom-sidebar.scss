@@ -1,0 +1,36 @@
+.bottom-sidebar {
+    position: relative;
+    background-color: $light-color;
+
+    display: flex;
+    flex: 1 0 100%;
+    flex-wrap: wrap;
+    order: 4;
+    
+    padding: 15px;
+
+
+    &__left {
+        display: flex;
+        position: relative;
+        flex: 1 0 50%;
+        align-items: flex-start;
+        padding: 20px 15px 25px;
+        border: 5px solid #ffffff;
+    }
+
+    &__right {
+        display: flex;
+        position: relative;
+        flex: 1 0 50%;
+        align-items: flex-start;
+        padding: 20px 15px 25px;
+        border: 5px solid #ffffff;
+    }
+
+    img {
+        padding: 0 15px 15px 0;
+        
+    }
+}
+

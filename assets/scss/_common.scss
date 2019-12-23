@@ -17,14 +17,26 @@ body {
 
 .wrapper {
     max-width: $large;
-    // margin: 0 auto;
+    flex-grow: 1;
     padding: 0 15px;
 }
 
-.container {
-    // background: rgba(255, 255, 255, 0.1);
-    background-color: #efefef;
+h2 {
+    margin: 10px 0;
+    color: #0b81be;
+    font-size: 2rem;
+    font-weight: normal;
 }
 
-// wtf
+p {
+    color: #858585;
+    line-height: 1.75;
+}
+
+li {
+    line-height: 1.5;
+}
+
+
+
 

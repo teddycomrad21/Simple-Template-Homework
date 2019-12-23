@@ -1,16 +1,64 @@
+.slider {
+    position: relative;
+    width: 100%;
+    padding: 15px;
+    background-color: #efefef;
+    order: 1;
+
+    min-height: 226px;
+}
+
+.slides {
+    position: relative;
+}
+
 .slide {
     position: absolute;
+    top: 0;
     opacity: 0;
+    border: 7px solid #ffffff;
+
+    display: flex;
+    background-image: url(/assets/img/carousel-item-bg.png);
+
+    &-image {
+        padding: 15px;
+    }
+
+    &-description {
+        padding: 15px 30px 15px 15px;
+        color: $light-color;
+
+        h3 {
+            text-transform: uppercase;
+            font-weight: normal;
+            font-size: 24px;
+            margin: 15px 0;
+        }
+
+        p {
+            margin: 12px 0 15px;
+            line-height: 1.5;
+        }
+    }
 
     &.active {
         opacity: 1;
     }
 }
 
-.controls {
-    margin-top: -20px;
+.controls > a {
+    position: absolute;
+    top: 50%;  
+    z-index: 2;
 }
 
-.slides {
-    padding-top: 20px;
+.prev {
+    left: -3px;
 }
+
+.next {
+    right: -3px;
+    transform: scale(-1 , 1);
+}
+

@@ -1,9 +1,62 @@
-footer {
+.footer {
     display: flex;
+    justify-content: center;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.4);
+
+    .wrapper {
+        display: flex;
+        margin-top: 37px;
+    }
 }
 
-.footer-right {
-    justify-content: end;
+.footer-left {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__img {
+        flex: 0 0 55px;
+    }
+
+    &__description {
+        flex: 1 0 100px;
+
+        span {
+            display: block;
+            color: #ffffff;
+            font-size: 24px;
+        }
+
+        span:last-of-type {
+            color: #727272;
+            font-size: 12px;
+        }
+    }
+
+    &__post {
+        position: relative;
+        margin: 12px 30px 30px 37px;
+        flex: 1 0 calc(100% - 67px);
+        padding: 20px;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.4);
+
+        p {
+            line-height: 18px;
+        }
+
+        span {
+            color: #0b81be;
+            font-size: 9.5px;
+            font-style: italic;
+        }
+    }
+
+    .footer-left__post:before {
+        position: absolute;
+        left: 0;
+        top: -18px;
+        content: url(../img/twitter-speech-bubble.png);
+    }
 }
+
