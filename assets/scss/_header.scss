@@ -1,11 +1,6 @@
 .header {
-    // padding: 0 50vw;
-    // margin: 0 -50vw;
-
     display: flex;
     justify-content: space-between;
-    // flex: 0 0 100%;
-    // align-items: center;
     margin: 30px 0;
 
     &-logo {
@@ -18,7 +13,6 @@
     display: flex;
     position: relative;
     justify-content: flex-end;
-    // flex: 1 0 200px;
 
     &-list {
         display: flex;
@@ -48,6 +42,6 @@
     }
 
     .-style-active > a {
-        background-color: $accent-color;
+        background: linear-gradient(to bottom, #0f8bbe 0%, #2989d8 50%, #207cca 51%, #0eb7fe 100%);
     }
 }

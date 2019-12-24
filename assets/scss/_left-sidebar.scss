@@ -11,7 +11,7 @@
 
     li {
         position: relative;
-        color: #858585;
+        color: $base-color;
         list-style: none;
         font-style: italic;
         padding: 7.5px;
@@ -23,3 +23,16 @@
         margin-left: -15px;
     }
 }
+
+@media (min-width: 769px) {
+
+    .left-sidebar::after {
+    position: absolute;
+    content: "";
+    height: 90%;
+    top: 15px;
+    right: 0;
+    border-right: 1px solid #dddddd;
+    }
+}
+    

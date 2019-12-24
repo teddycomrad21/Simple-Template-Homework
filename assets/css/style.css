@@ -565,7 +565,9 @@ li {
 }
 
 .menu .-style-active > a {
-  background-color: #0b81be;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0f8bbe), color-stop(50%, #2989d8), color-stop(51%, #207cca), to(#0eb7fe));
+  background: -o-linear-gradient(top, #0f8bbe 0%, #2989d8 50%, #207cca 51%, #0eb7fe 100%);
+  background: linear-gradient(to bottom, #0f8bbe 0%, #2989d8 50%, #207cca 51%, #0eb7fe 100%);
 }
 
 .container {
@@ -595,6 +597,10 @@ li {
   text-align: justify;
 }
 
+.main p i {
+  color: #424242;
+}
+
 .slider {
   position: relative;
   width: 100%;
@@ -603,7 +609,7 @@ li {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
-  min-height: 226px;
+  min-height: 236px;
 }
 
 .slides {
@@ -640,6 +646,7 @@ li {
 .slide-description p {
   margin: 12px 0 15px;
   line-height: 1.5;
+  color: #efefef;
 }
 
 .slide.active {
@@ -648,16 +655,16 @@ li {
 
 .controls > a {
   position: absolute;
-  top: 50%;
+  top: 43%;
   z-index: 2;
 }
 
 .prev {
-  left: -3px;
+  left: 3px;
 }
 
 .next {
-  right: -3px;
+  right: 3px;
   -webkit-transform: scale(-1, 1);
       -ms-transform: scale(-1, 1);
           transform: scale(-1, 1);
@@ -723,6 +730,10 @@ li {
           align-items: flex-start;
   padding: 20px 15px 25px;
   border: 5px solid #ffffff;
+  border-right: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(50%, #f5f5f5), to(#eeeeee));
+  background: -o-linear-gradient(top, #ffffff 0%, #f5f5f5 50%, #eeeeee 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, #f5f5f5 50%, #eeeeee 100%);
 }
 
 .bottom-sidebar__right {
@@ -738,10 +749,28 @@ li {
           align-items: flex-start;
   padding: 20px 15px 25px;
   border: 5px solid #ffffff;
+  border-left: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(50%, #f5f5f5), to(#eeeeee));
+  background: -o-linear-gradient(top, #ffffff 0%, #f5f5f5 50%, #eeeeee 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, #f5f5f5 50%, #eeeeee 100%);
 }
 
 .bottom-sidebar img {
   padding: 0 15px 15px 0;
+}
+
+.bottom-sidebar p {
+  margin: 0;
+}
+
+.bottom-sidebar::before {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  bottom: 14px;
+  left: 14px;
+  content: "";
+  background-color: #dddddd;
 }
 
 .footer {
@@ -819,4 +848,28 @@ li {
   left: 0;
   top: -18px;
   content: url(../img/twitter-speech-bubble.png);
+}
+
+.footer-right__logo {
+  text-align: right;
+  margin: 15px;
+}
+
+@media (min-width: 769px) {
+  .left-sidebar::after {
+    position: absolute;
+    content: "";
+    height: 90%;
+    top: 15px;
+    right: 0;
+    border-right: 1px solid #dddddd;
+  }
+  .bottom-sidebar__left::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    content: "";
+    border-right: 1px solid #dddddd;
+  }
 }
