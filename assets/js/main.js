@@ -5,12 +5,12 @@ $('.menu__hamburger').on('click', function () {
 });
 
 (function ($) {
-    var slides = $('.slide');
+    var slides = $('.carousel-slide');
     var prev = $('.prev');
     var next = $('.next');
     
     function nextSlide() {
-        var slideActive = $('.slide.active');
+        var slideActive = $('.carousel-slide.active');
         
         slideActive.toggleClass('active');
 
@@ -22,7 +22,7 @@ $('.menu__hamburger').on('click', function () {
     }
 
     function prevSlide() {
-        var slideActive = $('.slide.active');
+        var slideActive = $('.carousel-slide.active');
 
         slideActive.toggleClass('active');
 

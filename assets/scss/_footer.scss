@@ -92,12 +92,14 @@
 @media (max-width: 768px) {
     .footer-right__logo {
         text-align: center;
+        
     }
 }
 
 @media (min-width: 769px) {
     .footer-right__logo {
         text-align: right;
+        margin: 90px 15px 15px 110px;
     }
 }
 

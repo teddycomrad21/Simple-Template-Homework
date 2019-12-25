@@ -23,6 +23,20 @@
         margin-left: -15px;
     }
 
+    li span {
+        position: relative;
+    }
+
+    span::after {
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        left: 0;
+        height: 1px;
+        content: "";
+        background-color: #dddddd;
+    }
+
     @media (max-width: 768px) {
         flex: 1 0 100%;
         padding: 0 20px 20px 20px;

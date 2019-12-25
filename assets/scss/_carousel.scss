@@ -1,18 +1,17 @@
-.slider {
+.carousel {
     position: relative;
     width: 100%;
     padding: 15px;
     background-color: $light-color;
     order: 1;
 
-    min-height: 236px;
+
+    &-slides {
+        position: relative;
+    }
 }
 
-.slides {
-    position: relative;
-}
-
-.slide {
+.carousel-slide {
     position: absolute;
     top: 0;
     opacity: 0;
@@ -21,7 +20,9 @@
     display: flex;
     background-image: url(/assets/img/carousel-item-bg.png);
 
-    &-image {
+    &__image {
+        display: flex;
+        align-items: center;
         padding: 15px;
 
         @media (max-width: 768px) {
@@ -30,7 +31,7 @@
         }
     }
 
-    &-description {
+    &__description {
         padding: 15px 30px 15px 15px;
         color: $light-color;
 
@@ -66,16 +67,18 @@
         }
     }
 
-    &.active {
-        opacity: 1;
-    }
-
     @media (max-width: 768px) {
         flex-wrap: wrap;
     }
 }
 
-.controls > a {
+.carousel-slide.active {
+    position: relative;
+    z-index: 1;
+    opacity: 1;
+}
+
+.carousel-controls > a {
     position: absolute;
     top: 43%;  
     z-index: 2;
