@@ -19,6 +19,10 @@ body {
     max-width: $large;
     flex-grow: 1;
     padding: 0 15px;
+
+    @media (max-width: 768px) {
+        flex-wrap: wrap;
+    }
 }
 
 h2 {

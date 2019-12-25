@@ -1,3 +1,9 @@
+$('.menu__hamburger').on('click', function () {
+    $(this).toggleClass('active').
+        next().
+        toggleClass('active');
+});
+
 (function ($) {
     var slides = $('.slide');
     var prev = $('.prev');
@@ -41,3 +47,4 @@
     });
 
 })(jQuery);
+

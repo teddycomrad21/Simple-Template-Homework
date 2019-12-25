@@ -14,34 +14,115 @@
     position: relative;
     justify-content: flex-end;
 
-    &-list {
+    &__list {
         display: flex;
         align-items: center;
-        
         text-decoration: none;
         list-style-type: none;
         color: $light-color;
-
         min-height: 40px;
 
-        &__item {
+        &-item {
+            width: 100%;
             font-size: 12px;  
-            margin-left: 7px;    
+            margin-left: 7px; 
+            text-align: center;   
 
             a {
+                display: block;
                 border-radius: 15px;
                 padding: 12px 15px;
                 transition: all 0.5s;
-                
+                text-decoration: none;
+                color: $light-color;
 
                 &:hover {
                     background-color: $base-color;
                 }
             }
         }
+
+        @media (max-width: 850px) {
+            position: absolute;
+            z-index: -999;
+            top: 100%;
+            right: -15px;
+            visibility: hidden;
+            flex-direction: column;
+            width: 100vw;
+            transition: opacity 0.5s;
+            opacity: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
     }
 
     .-style-active > a {
         background: linear-gradient(to bottom, #0f8bbe 0%, #2989d8 50%, #207cca 51%, #0eb7fe 100%);
+    }
+
+    .menu__list.active {
+        padding: 0;
+        z-index: 3;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .menu__list.active 
+    .menu__list-item {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .menu__list.active 
+    .menu__list-item a {
+        width: 100%;
+        padding: 15px;
+        border-radius: 0;
+    }
+
+    .menu__hamburger {
+        
+        flex-direction: column;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.25);
+        align-items: center;
+        justify-content: center;
+
+        @media (min-width: 851px) {
+            display: none;
+        }
+
+        @media (max-width: 850px) {
+            display: flex;
+        }
+    }
+
+    .menu__hamburger-row {
+        position: relative;
+        width: 60%;
+        height: 2px;
+        margin: 2px 0;
+        transition: all 0.5s;
+        background-color: #ffffff;
+    }
+
+    .menu__hamburger.active
+    .menu__hamburger-row:first-of-type {
+        top: 6px;
+        transform: rotate(-135deg);
+    }
+
+    .menu__hamburger.active
+    .menu__hamburger-row:nth-of-type(2) {
+        opacity: 0;
+    }
+
+    .menu__hamburger.active
+    .menu__hamburger-row:last-of-type {
+        top: -6px;
+        transform: rotate(-225deg);
     }
 }

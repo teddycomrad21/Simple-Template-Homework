@@ -23,6 +23,11 @@
 
     &-image {
         padding: 15px;
+
+        @media (max-width: 768px) {
+            flex: 1 0 100%;
+            justify-content: center;
+        }
     }
 
     &-description {
@@ -34,17 +39,39 @@
             font-weight: normal;
             font-size: 24px;
             margin: 15px 0;
+
+            @media (max-width: 768px) {
+                flex: 1 0 100%;
+                text-align: center;
+                overflow: hidden;
+                margin: 0 0 15px 0;
+                
+            }
         }
 
         p {
             margin: 12px 0 15px;
             line-height: 1.5;
             color: $light-color;
+
+            @media (max-width: 768px) {
+                text-align: center;
+                margin: 0 0 15px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            flex: 1 0 100%;
+            padding: 0 15px 15px 15px;
         }
     }
 
     &.active {
         opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+        flex-wrap: wrap;
     }
 }
 

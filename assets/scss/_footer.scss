@@ -50,6 +50,14 @@
             font-size: 9.5px;
             font-style: italic;
         }
+
+        @media (min-width: 577px) {
+            margin: 12px 30px 30px 37px;
+        }
+
+        @media (max-width: 576px) {
+            margin: 12px 0 30px 37px;
+        }
     }
 
     .footer-left__post:before {
@@ -58,9 +66,39 @@
         top: -18px;
         content: url(../img/twitter-speech-bubble.png);
     }
+
+    @media (max-width: 768px) {
+        flex: 1 0 100%;
+    }
+}
+
+.footer-right {
+    @media (max-width: 768px) {
+        flex: 1 0 100%;
+    }
 }
 
 .footer-right__logo {
     text-align: right;
     margin: 15px;
+}
+
+@media (max-width: 850px) {
+    .footer .menu__list {
+        top: initial;
+        bottom: 100%;
+    }
+
+@media (max-width: 768px) {
+    .footer-right__logo {
+        text-align: center;
+    }
+}
+
+@media (min-width: 769px) {
+    .footer-right__logo {
+        text-align: right;
+    }
+}
+
 }
