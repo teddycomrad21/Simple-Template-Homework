@@ -18,7 +18,10 @@
     border: 7px solid #ffffff;
 
     display: flex;
-    background-image: url(/assets/img/carousel-item-bg.png);
+    // background-image: url(/assets/img/carousel-item-bg.png);
+    background: url(/assets/img/carousel-item-bg.png);
+    background-position: 50% 50%;
+    background-size: cover;
 
     &__image {
         display: flex;
