@@ -553,6 +553,7 @@ li {
   font-size: 12px;
   margin-left: 7px;
   text-align: center;
+  display: block;
 }
 
 .menu__list-item a {
@@ -574,27 +575,6 @@ li {
   background: -webkit-gradient(linear, left top, left bottom, from(#0f8bbe), color-stop(50%, #2989d8), color-stop(51%, #207cca), to(#0eb7fe));
   background: -o-linear-gradient(top, #0f8bbe 0%, #2989d8 50%, #207cca 51%, #0eb7fe 100%);
   background: linear-gradient(to bottom, #0f8bbe 0%, #2989d8 50%, #207cca 51%, #0eb7fe 100%);
-}
-
-.menu .menu__list.active {
-  padding: 0;
-  z-index: 3;
-  visibility: visible;
-  opacity: 1;
-}
-
-.menu .menu__list.active
-.menu__list-item {
-  width: 100%;
-  margin: 0;
-  text-align: center;
-}
-
-.menu .menu__list.active
-.menu__list-item a {
-  width: 100%;
-  padding: 15px;
-  border-radius: 0;
 }
 
 .menu .menu__hamburger {
@@ -644,6 +624,27 @@ li {
   -webkit-transform: rotate(-225deg);
       -ms-transform: rotate(-225deg);
           transform: rotate(-225deg);
+}
+
+.menu__list.active {
+  padding: 0;
+  z-index: 3;
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu__list.active
+.menu__list-item {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+.menu__list.active
+.menu__list-item a {
+  width: 100%;
+  padding: 15px;
+  border-radius: 0;
 }
 
 .container {
@@ -997,9 +998,6 @@ li {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100vw;
-    -webkit-transition: opacity 0.5s;
-    -o-transition: opacity 0.5s;
-    transition: opacity 0.5s;
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.8);
   }
